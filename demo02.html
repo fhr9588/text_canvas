@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="aa" width="1111"height="1111"></canvas>
+<script src="./js/jquery-1.11.1.min.js"></script>
+<script>
+    var aa = document.getElementById('aa');
+    var bb = aa.getContext('2d');
+
+    bb.fillStyle = '#99f';    //   填充颜色
+    bb.fillRect(0,0,500,500);
+
+    var img = new Image;
+    img.src = 'imgs/1.jpg';
+
+    img.onload = function () {
+        bb.drawImage(img, 70,70);
+    }
+
+    bb.fillStyle = '#fff';   // 文字填充颜色
+    bb.font = '33px Adobe Ming Std';
+    bb.fillText('我叫冯浩然',390,100);
+
+    bb.fillStyle = '#fff';
+    bb.font = '66px Adobe Ming Std';
+    bb.fillText('我为自己代言!',390,200);
+
+    bb.stroke();
+</script>
+</body>
+</html>
