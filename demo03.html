@@ -35,7 +35,6 @@
             line-height: 50px;
             border-radius: 25px;
         }
-
     </style>
 </head>
 <body>
@@ -61,6 +60,7 @@
 <script>
     //预加载将图片绘制到画布
     $(function(){
+        //如果不是PC就修改a标签的属性
         function IsPC() {
             var userAgentInfo = navigator.userAgent;
             var Agents = ["Android", "iPhone",
@@ -80,8 +80,7 @@
             $('#aaaa').css({'background':'#aaa','color':"#e4393c"})
         }
 
-
-
+        
         hechen();
     });
 
